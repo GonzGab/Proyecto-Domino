@@ -10,12 +10,11 @@ public class Dominó {
     static final int TOTAL_FICHAS = 28;*/
 
     public static void main(String[] args) {
-        //Ficha[] fichas = new Ficha[28];
-        TodasLasFichas todas=new TodasLasFichas();
+        TodasLasFichas todas = new TodasLasFichas();
         int numJ = intrJugadores();
         Jugador[] jugadores = new Jugador[numJ];
         TEMPprintFichas(todas);
-        giveFichas(jugadores, numJ, fichas);
+        giveFichas(jugadores, numJ, todas);
         TEMPtoStringFichasPlayer(numJ, jugadores);
     }
     
@@ -45,11 +44,11 @@ public class Dominó {
         return numJ;
     }
     
-    public static void giveFichas(Jugador[] jugadores, int numJ, Ficha[] fichas){   //cambiar
+    public static void giveFichas(Jugador[] jugadores, int numJ, TodasLasFichas todas){
         System.out.println("Repartiendo fichas a los jugadores...");
         int maxFichas = calcMaxFichas(numJ);
         for(int i = 0; i < numJ; i++){
-            jugadores[i] = new Jugador(maxFichas, fichas);
+            jugadores[i] = new Jugador(maxFichas, todas);
         }
         System.out.println("¡Fichas repartidas!");
     }

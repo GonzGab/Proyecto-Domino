@@ -3,12 +3,8 @@ package Piezas;
 public class TodasLasFichas {
     private final int MAX_FICHAS = 7;
     private int numMaxFichas;
-    private Ficha [] todas;
-    private int asd;    //más tonto y no naces
-    
-    private void pene(){
-        System.out.println("ME GUSTAN LOS PENES");
-    }
+    private Ficha[] todas;
+    private int asd;
     
     public TodasLasFichas(){
         int k=0;
@@ -26,6 +22,18 @@ public class TodasLasFichas {
                 k++;
             }
         }
+    }
+    
+    public Ficha[] getTodas(){
+        return todas;
+    }
+    
+    public Ficha getUnaFicha(int i){
+        return todas[i];
+    }
+    
+    public void setUnaFichatoNull(int i){
+        todas[i] = null;
     }
     
 }

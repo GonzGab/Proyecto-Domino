@@ -7,16 +7,16 @@ public class Jugador {
     int maxFichas;
     Ficha[] mano;
     
-    public Jugador(int maxFichas, Ficha[] fichas){
+    public Jugador(int maxFichas, TodasLasFichas todas){
         mano = new Ficha[maxFichas];
         this.maxFichas = maxFichas;
         int cont = 0;
         
         for(int i = 0; i < 7; i++){
-            cont = rnd.nextInt(fichas.length);
-            if(fichas[cont] != null){
-                mano[i] = fichas[cont];
-                fichas[cont] = null;
+            cont = rnd.nextInt(todas.getTodas().length);
+            if(todas.getUnaFicha(cont) != null){
+                mano[i] = todas.getUnaFicha(cont);
+                todas.setUnaFichatoNull(cont);
             }else{
                 i--;
             }
