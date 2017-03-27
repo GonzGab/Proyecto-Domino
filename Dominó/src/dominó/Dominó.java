@@ -11,15 +11,9 @@ public class Dominó {
         TodasLasFichas todas = new TodasLasFichas();
         int numJ = intrJugadores();
         Jugador[] jugadores = new Jugador[numJ];
-        TEMPprintFichas(todas);
         giveFichas(jugadores, numJ, todas);
         TEMPtoStringFichasPlayer(numJ, jugadores);
-        TodasLasFichas todas=new TodasLasFichas();
-        int numJ = intrJugadores();
-        Jugador[] jugadores = new Jugador[numJ];
         System.out.println(todas);
-        //giveFichas(jugadores, numJ, fichas);
-        //TEMPtoStringFichasPlayer(numJ, jugadores);
     }
     
     public static int intrJugadores(){

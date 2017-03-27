@@ -1,45 +1,29 @@
 package Piezas;
 
+import static Constantes.Constantes.*;
+
 public class TodasLasFichas {
-    private final int MAX_FICHAS = 7;
     private int numMaxFichas;
     private Ficha[] todas;
     private int numFichas;
     public TodasLasFichas(){
         int k=0;
-        for (int i = 0; i < MAX_FICHAS; i++) {
-            for (int j = 0; j < MAX_FICHAS; j++) {
+        for (int i = 0; i < MAX_VALOR_FICHAS; i++) {
+            for (int j = 0; j < MAX_VALOR_FICHAS; j++) {
                 k++;
             }
         }
         todas= new Ficha[k];
         numMaxFichas=k;
         k = 0;
-        for(int i = 0; i < MAX_FICHAS; i++){
-            for(int j = i; j < MAX_FICHAS; j++){
+        for(int i = 0; i < MAX_VALOR_FICHAS; i++){
+            for(int j = i; j < MAX_VALOR_FICHAS; j++){
                 todas[k] = new Ficha(i, j);
                 k++;
             }
         }
         numFichas=k;
         System.out.println("SON "+numFichas);
-    }
-    
-    
-    
-    public int getNumMaxFichas(){
-        return numMaxFichas;
-    }
-    
-    public String toString(){
-        StringBuilder toret = new StringBuilder();
-        for (int i = 0; i < numFichas; i++) {
-            toret.append((1+i));
-            toret.append("-> ");
-            toret.append(todas[i].TEMPtoString());
-            toret.append("\n");
-        }
-        return toret.toString();
     }
     
     public Ficha[] getTodas(){
@@ -50,8 +34,30 @@ public class TodasLasFichas {
         return todas[i];
     }
     
-    public void setUnaFichatoNull(int i){
-        todas[i] = null;
+    public int getNumMaxFichas(){
+        return numMaxFichas;
     }
     
+    public int getNumFichas(){
+        return numFichas;
+    }
+    
+    public void eliminar(int pos){
+        for (int i = pos; i < numFichas-1; i++) {
+            todas[i] = todas[i+1];
+        }
+        numFichas--;
+    }
+    
+    @Override
+    public String toString(){
+        StringBuilder toret = new StringBuilder();
+        for (int i = 0; i < numFichas; i++) {
+            toret.append((1+i));
+            toret.append("-> ");
+            toret.append(todas[i].TEMPtoString());
+            toret.append("\n");
+        }
+        return toret.toString();
+    }
 }
