@@ -5,6 +5,7 @@ public class TodasLasFichas {
     private final int MAX_FICHAS = 7;
     private int numMaxFichas;
     private Ficha [] todas;
+    private int asd;
     
     public TodasLasFichas(){
         int k=0;

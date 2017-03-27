@@ -10,11 +10,11 @@ public class Dominó {
     static final int TOTAL_FICHAS = 28;*/
 
     public static void main(String[] args) {
-        Ficha[] fichas = new Ficha[28];
+        //Ficha[] fichas = new Ficha[28];
         TodasLasFichas todas=new TodasLasFichas();
         int numJ = intrJugadores();
         Jugador[] jugadores = new Jugador[numJ];
-        TEMPprintFichas(fichas);
+        TEMPprintFichas(todas);
         giveFichas(jugadores, numJ, fichas);
         TEMPtoStringFichasPlayer(numJ, jugadores);
     }
@@ -68,7 +68,7 @@ public class Dominó {
     }
     
     
-    public static void TEMPprintFichas(Ficha[] fichas){     //cambiar
+    public static void TEMPprintFichas(TodasLasFichas ){     //cambiar
         for(int i = 0; i < TOTAL_FICHAS; i++){
             System.out.println(i + ": " + fichas[i].TEMPtoString());
         }
