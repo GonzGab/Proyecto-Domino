@@ -29,7 +29,10 @@ public class Jugador {
         
         for(int i = 0; i < numFichas; i++){
             toret.append(mano[i].TEMPtoString() + "\n");
+<<<<<<< HEAD
             i++;
+=======
+>>>>>>> origin/master
         }
         
         return toret.toString();

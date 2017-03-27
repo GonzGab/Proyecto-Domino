@@ -3,7 +3,10 @@ package Piezas;
 import static Constantes.Constantes.*;
 
 public class TodasLasFichas {
+<<<<<<< HEAD
     public final int MAX_FICHAS = 7;
+=======
+>>>>>>> origin/master
     private int numMaxFichas;
     private Ficha[] todas;
     private int numFichas;
@@ -14,6 +17,7 @@ public class TodasLasFichas {
                 k++;
             }
         }
+        System.out.println("k = " + k);
         todas= new Ficha[k];
         numMaxFichas=k;
         k = 0;
