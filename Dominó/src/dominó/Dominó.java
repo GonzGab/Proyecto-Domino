@@ -1,4 +1,5 @@
 package dominó;
+import static Constantes.Constantes.MAX_NUM_FICHAS_MANO;
 import Piezas.*;
 import java.util.Scanner;
 //PENDIENTE: guardar las fichas dadas a los jugadores en otro array (vaciando el montón original), y rellenar todos los huecos libres en el array donde están las fichas
@@ -44,28 +45,26 @@ public class Dominó {
     
     public static void giveFichas(Jugador[] jugadores, int numJ, TodasLasFichas todas){
         System.out.println("Repartiendo fichas a los jugadores...");
-        int maxFichas = calcMaxFichas(numJ);
+        int maxFichasJ = calcMaxFichas(numJ, todas.getNumMaxFichas());
         for(int i = 0; i < numJ; i++){
-            jugadores[i] = new Jugador(maxFichas, todas);
+            jugadores[i] = new Jugador(maxFichasJ, todas);
         }
         System.out.println("¡Fichas repartidas!");
     }
     
-    public static int calcMaxFichas(int numJ, int maxFichas){
-        int toret = maxFichas;
+    public static int calcMaxFichas(int numJ, int maxFichasTotal){
+        int toret = maxFichasTotal - MAX_NUM_FICHAS_MANO;
         
-        if(numJ == 2){
-            toret = ;
-        }else if(numJ == 3){
-            toret = 14;
+        if(numJ == 3){
+            toret = maxFichasTotal - MAX_NUM_FICHAS_MANO * 2;
         }else{
-            toret = 7;
+            toret = maxFichasTotal - MAX_NUM_FICHAS_MANO * 3;
         }
         return toret;
     }
     
     
-    public static void TEMPtoStringFichasPlayer(int numJ, Jugador[] jugadores){     //posiblemente cambiar también xdlol
+    public static void TEMPtoStringFichasPlayer(int numJ, Jugador[] jugadores){
         for (int i = 0; i < numJ; i++) {
             System.out.println(jugadores[i].TEMPtoString());
         }
