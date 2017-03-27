@@ -7,6 +7,10 @@ public class TodasLasFichas {
     private Ficha [] todas;
     private int asd;
     
+    private void pene(){
+        System.out.println("ME GUSTAN LOS PENES");
+    }
+    
     public TodasLasFichas(){
         int k=0;
         for (int i = 0; i < MAX_FICHAS; i++) {
