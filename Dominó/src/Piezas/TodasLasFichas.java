@@ -3,17 +3,14 @@ package Piezas;
 import static Constantes.Constantes.*;
 
 public class TodasLasFichas {
-<<<<<<< HEAD
     public final int MAX_FICHAS = 7;
-=======
->>>>>>> origin/master
     private int numMaxFichas;
     private Ficha[] todas;
     private int numFichas;
     public TodasLasFichas(){
         int k=0;
         for (int i = 0; i < MAX_VALOR_FICHAS; i++) {
-            for (int j = 0; j < MAX_VALOR_FICHAS; j++) {
+            for (int j = i; j < MAX_VALOR_FICHAS; j++) {
                 k++;
             }
         }

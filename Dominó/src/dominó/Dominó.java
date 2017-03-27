@@ -42,6 +42,7 @@ public class Dominó {
         return numJ;
     }
     
+    /*
     public static void giveFichas(Jugador[] jugadores, int numJ, TodasLasFichas todas){
         System.out.println("Repartiendo fichas a los jugadores...");
         int maxFichas = calcMaxFichas(numJ);
@@ -51,11 +52,11 @@ public class Dominó {
         System.out.println("¡Fichas repartidas!");
     }
     
-    public static int calcMaxFichas(int numJ, int maxFichas){
+    public static int calcMaxFichas(int numJ, int maxFichas){//sin acabar
         int toret = maxFichas;
         
         if(numJ == 2){
-            toret = ;
+            toret = 0;
         }else if(numJ == 3){
             toret = 14;
         }else{
@@ -63,6 +64,7 @@ public class Dominó {
         }
         return toret;
     }
+    */
     
     
     public static void TEMPtoStringFichasPlayer(int numJ, Jugador[] jugadores){     //posiblemente cambiar también xdlol

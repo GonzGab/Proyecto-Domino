@@ -4,13 +4,9 @@ import java.util.Random;
 
 public class Jugador {
     Random rnd = new Random();
-<<<<<<< HEAD
     private int maxFichas;
     private Ficha[] mano;
-=======
     int maxFichasArray;
-    Ficha[] mano;
->>>>>>> origin/master
     private int numFichas;
     
     public Jugador(int maxFichas, TodasLasFichas todas){
@@ -31,16 +27,11 @@ public class Jugador {
     public String TEMPtoString(){
         StringBuilder toret = new StringBuilder();
         
-<<<<<<< HEAD
-        while(mano[i] != null && i < maxFichas){
-            toret.append(mano[i].TEMPtoString());
-            toret.append( "\n");
-=======
         for(int i = 0; i < numFichas; i++){
             toret.append(mano[i].TEMPtoString() + "\n");
->>>>>>> origin/master
             i++;
         }
+        
         return toret.toString();
     }
 }
