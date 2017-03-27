@@ -6,11 +6,12 @@ import java.util.Scanner;
 //comer penes
 
 public class Dominó {
-    static final int MAX_FICHAS = 7;
-    static final int TOTAL_FICHAS = 28;
+   /* static final int MAX_FICHAS = 7;
+    static final int TOTAL_FICHAS = 28;*/
 
     public static void main(String[] args) {
         Ficha[] fichas = new Ficha[28];
+        TodasLasFichas todas=new TodasLasFichas();
         inicializarFichas(fichas);
         int numJ = intrJugadores();
         Jugador[] jugadores = new Jugador[numJ];
@@ -67,15 +68,6 @@ public class Dominó {
         return toret;
     }
     
-    public static void inicializarFichas(Ficha[] fichas){   //cambiar
-        int k = 0;
-        for(int i = 0; i < MAX_FICHAS; i++){
-            for(int j = i; j < MAX_FICHAS; j++){
-                fichas[k] = new Ficha(i, j);
-                k++;
-            }
-        }
-    }
     
     public static void TEMPprintFichas(Ficha[] fichas){     //cambiar
         for(int i = 0; i < TOTAL_FICHAS; i++){
