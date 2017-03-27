@@ -4,8 +4,7 @@ public class TodasLasFichas {
     private final int MAX_FICHAS = 7;
     private int numMaxFichas;
     private Ficha[] todas;
-    private int asd;
-    
+    private int numFichas;
     public TodasLasFichas(){
         int k=0;
         for (int i = 0; i < MAX_FICHAS; i++) {
@@ -22,6 +21,25 @@ public class TodasLasFichas {
                 k++;
             }
         }
+        numFichas=k;
+        System.out.println("SON "+numFichas);
+    }
+    
+    
+    
+    public int getNumMaxFichas(){
+        return numMaxFichas;
+    }
+    
+    public String toString(){
+        StringBuilder toret = new StringBuilder();
+        for (int i = 0; i < numFichas; i++) {
+            toret.append((1+i));
+            toret.append("-> ");
+            toret.append(todas[i].TEMPtoString());
+            toret.append("\n");
+        }
+        return toret.toString();
     }
     
     public Ficha[] getTodas(){
