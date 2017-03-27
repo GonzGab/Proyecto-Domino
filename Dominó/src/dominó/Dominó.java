@@ -6,17 +6,14 @@ import java.util.Scanner;
 //comer penes
 
 public class Dominó {
-   /* static final int MAX_FICHAS = 7;
-    static final int TOTAL_FICHAS = 28;*/
 
     public static void main(String[] args) {
-        //Ficha[] fichas = new Ficha[28];
         TodasLasFichas todas=new TodasLasFichas();
         int numJ = intrJugadores();
         Jugador[] jugadores = new Jugador[numJ];
-        TEMPprintFichas(todas);
-        giveFichas(jugadores, numJ, fichas);
-        TEMPtoStringFichasPlayer(numJ, jugadores);
+        System.out.println(todas);
+        //giveFichas(jugadores, numJ, fichas);
+        //TEMPtoStringFichasPlayer(numJ, jugadores);
     }
     
     public static int intrJugadores(){
@@ -67,12 +64,6 @@ public class Dominó {
         return toret;
     }
     
-    
-    public static void TEMPprintFichas(TodasLasFichas ){     //cambiar
-        for(int i = 0; i < TOTAL_FICHAS; i++){
-            System.out.println(i + ": " + fichas[i].TEMPtoString());
-        }
-    }
     
     public static void TEMPtoStringFichasPlayer(int numJ, Jugador[] jugadores){     //posiblemente cambiar también xdlol
         for (int i = 0; i < numJ; i++) {
