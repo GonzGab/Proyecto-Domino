@@ -11,15 +11,9 @@ public class Dominó {
         TodasLasFichas todas = new TodasLasFichas();
         int numJ = intrJugadores();
         Jugador[] jugadores = new Jugador[numJ];
-        TEMPprintFichas(todas);
         giveFichas(jugadores, numJ, todas);
         TEMPtoStringFichasPlayer(numJ, jugadores);
-        TodasLasFichas todas=new TodasLasFichas();
-        int numJ = intrJugadores();
-        Jugador[] jugadores = new Jugador[numJ];
         System.out.println(todas);
-        //giveFichas(jugadores, numJ, fichas);
-        //TEMPtoStringFichasPlayer(numJ, jugadores);
     }
     
     public static int intrJugadores(){
@@ -57,11 +51,11 @@ public class Dominó {
         System.out.println("¡Fichas repartidas!");
     }
     
-    public static int calcMaxFichas(int numJ){
-        int toret = 28;
+    public static int calcMaxFichas(int numJ, int maxFichas){
+        int toret = maxFichas;
         
         if(numJ == 2){
-            toret = 21;
+            toret = ;
         }else if(numJ == 3){
             toret = 14;
         }else{

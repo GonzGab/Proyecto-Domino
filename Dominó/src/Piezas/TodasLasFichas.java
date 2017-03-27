@@ -1,7 +1,7 @@
 package Piezas;
 
 public class TodasLasFichas {
-    private final int MAX_FICHAS = 7;
+    public final int MAX_FICHAS = 7;
     private int numMaxFichas;
     private Ficha[] todas;
     private int numFichas;
@@ -22,7 +22,6 @@ public class TodasLasFichas {
             }
         }
         numFichas=k;
-        System.out.println("SON "+numFichas);
     }
     
     
