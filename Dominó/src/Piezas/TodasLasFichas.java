@@ -1,11 +1,10 @@
 package Piezas;
 
 public class TodasLasFichas {
-    //Meter array con todas las fichas y cuántas fichas hay/quedan
     private final int MAX_FICHAS = 7;
     private int numMaxFichas;
     private Ficha [] todas;
-    private int asd;
+    private int asd;    //más tonto y no naces
     
     private void pene(){
         System.out.println("ME GUSTAN LOS PENES");
